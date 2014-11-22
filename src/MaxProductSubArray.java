@@ -1,5 +1,5 @@
 
-public class Solution {
+public class MaxProductSubArray {
 
     private static int min(int x, int y) {
     	return x > y ? y : x;
@@ -125,11 +125,11 @@ public class Solution {
     
 
     public static void main(String[] args) throws Exception{
-        System.out.println(new Solution().maxProduct(new int[]{1, -2, 0}));
-        System.out.println(new Solution().maxProduct(new int[]{-2, 0 ,1}));
-        System.out.println(new Solution().maxProduct(new int[]{0, 2}));
-        System.out.println(new Solution().maxProduct(new int[]{0}));
-        System.out.println(new Solution().maxProduct(new int[]{-1, -2, -9, -6}));
-        System.out.println(new Solution().maxProduct(new int[]{-2, 5, -2, -4, 3}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{1, -2, 0}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{-2, 0 ,1}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{0, 2}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{0}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{-1, -2, -9, -6}));
+        System.out.println(new MaxProductSubArray().maxProduct(new int[]{-2, 5, -2, -4, 3}));
     }
 }
