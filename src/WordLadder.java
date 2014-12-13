@@ -87,9 +87,9 @@ public class WordLadder {
 		nodes.add(startNode);
 		nodes.add(endNode);
 
-		Map<String, WordNode> oridict = new HashMap<String, WordNode>();
+		Map<String, WordNode> unvisited = new HashMap<String, WordNode>();
 		for (WordNode node : nodes) {
-			oridict.put(node.word, node);
+			unvisited.put(node.word, node);
 		}
 
 		
@@ -97,7 +97,7 @@ public class WordLadder {
 		
 		startNode.hop = 0;
 		queue.add(startNode);
-		oridict.remove(startNode.word);
+		unvisited.remove(startNode.word);
 		startNode.paths.add(Arrays.asList(startNode.word));
 		
 		int minHop = Integer.MAX_VALUE;
@@ -112,7 +112,7 @@ public class WordLadder {
 				continue;
 			}
 			
-			oridict.remove(node.word);
+			unvisited.remove(node.word);
 			visited.add(node);
 
 			for (int i = 0; i < node.word.length(); i++) {
@@ -121,8 +121,8 @@ public class WordLadder {
 					builder.setCharAt(i, ch);
 					
 					String newWord = builder.toString();
-					if (oridict.containsKey(newWord)) {
-						WordNode dnode = oridict.get(newWord);
+					if (unvisited.containsKey(newWord)) {
+						WordNode dnode = unvisited.get(newWord);
 
 						if (dnode.hop <= node.hop) {
 							continue;
