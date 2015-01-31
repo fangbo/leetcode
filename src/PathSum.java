@@ -16,7 +16,6 @@ public class PathSum {
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
     	List<List<Integer>> resultPaths = new ArrayList<List<Integer>>();
     	if (root == null) {
-//    		resultPaths.add(new ArrayList<Integer>());
     		return resultPaths;
     	}
     	
@@ -48,7 +47,6 @@ public class PathSum {
     	}
     	return sum;
     }
-    
     
     private List<List<TreeNode>> subPaths(TreeNode node) {
     	
